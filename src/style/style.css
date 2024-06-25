@@ -9,6 +9,7 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* GERAL */
 :root {
     --bg-color: #080808;
     --second-bg-color: #131313;
@@ -17,15 +18,19 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 60%;
     overflow-x: hidden;
 }
 
 body {
+    scroll-behavior: smooth;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+/*  */
 
+/* HEADER */
 .header {
     position: fixed;
     top: 0;
@@ -76,19 +81,21 @@ body {
     color: var(--main-color);
     display: none;
 }
+/*  */
 
+/* SEÇÔES/GERAL */
 section {
     min-height: 100vh;
     padding: 10rem 12% 10rem;
 }
 
-.home {
+.home-section {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.home-content {
+.home-container {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -96,7 +103,6 @@ section {
     justify-content: center;
     margin-top: 3rem;
 }
-
 span {
     color: var(--main-color);
 }
@@ -104,14 +110,16 @@ span {
 .logo span {
     color: var(--main-color);
 }
+/*  */
 
-.home-content h3 {
+/* SEÇÃO HOME */
+.home-container h3 {
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size: 3.5rem;
 }
 
-.home-content h1 {
+.home-container h1 {
     font-size: 7rem;
     font-weight: 700;
     margin-top: 1.5rem;
@@ -138,7 +146,7 @@ span {
         0 0 100px var(--main-color);
 }
 
-.home-content p {
+.home-container p {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.8;
@@ -206,23 +214,23 @@ span {
     color: black;
 }
 
-.text-animation {
+.texto-animacao {
     font-size: 34px;
     font-weight: 600;
     min-height: 280px;
 }
 
-.text-animation span {
+.texto-animacao  span {
     position: relative;
 }
 
-.text-animation span::before {
+.texto-animacao  span::before {
     content: "Web Developer";
     color: var(--main-color);
     animation: words 20s infinite;
 }
 
-.text-animation span::after {
+.texto-animacao  span::after {
     content: "";
     background-color: var(--bg-color);
     position: relative;
@@ -248,7 +256,7 @@ span {
 
     21%,
     40% {
-        content: "Web Designer";
+        content: "Desing Web";
     }
 
     41%,
@@ -263,7 +271,7 @@ span {
 
     81%,
     100% {
-        content: "Software Tester";
+        content: "Teste";
     }
 }
 
@@ -293,3 +301,178 @@ span {
         width: calc(100% + 8px);
     }
 }
+
+/*  */
+
+
+/* SEÇÃO FORMAÇÃO */
+
+.title-formacao{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.formacao-section{
+    padding: 100px 15px;
+    background-color: var(--second-bg-color);
+}
+
+.formacao h2{
+    margin-bottom: 5rem;
+}
+
+.linhaDoTempo-container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.linhaDoTempo-container::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: calc(50% - 1px);
+}
+
+.linhaDoTempo-conteudo{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.linhaDoTempo-conteudo:last-child{
+    margin-bottom: 0;
+}
+
+.linhaDoTempo-conteudo:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.linhaDoTempo-conteudo:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.linhaDoTempo-Ponto{
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color),
+    0 0 50px var(--main-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+.linhaDoTempo-data{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px
+}
+
+.linhaDoTempo-texto{
+    background-color: var(--bg-color);
+    border: 3px solid var(--main-color);
+    padding:  30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.linhaDoTempo-texto:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.linhaDoTempo-texto h3{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.linhaDoTempo-texto p{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
+
+/*  */
+
+
+/* SEÇÃO SERVIÇOS */
+.servicos-section{
+    background-color: var(--bg-color);
+    color: black;
+}
+
+.servicos-section h2{
+    margin-bottom: 5rem;
+    color: white;
+}
+
+.servicos-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.servicos{
+    background-color: var(--main-color);
+    height: 300px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.servicos:hover{
+    background-color: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.servicos .servicos-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: left;
+    align-items: baseline;
+    padding: 5rem 5rem;
+}
+
+.servicos-info h4{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2;
+}
+
+.servicos p{
+    font-size: 1.6rem;
+    font-weight: 600;
+    max-height: 1000px;
+    line-height: 1.7;
+    margin: auto;
+}
+/*  */

@@ -256,7 +256,7 @@ span {
 
     21%,
     40% {
-        content: "Desing Web";
+        content: "Design Web";
     }
 
     41%,
@@ -475,4 +475,31 @@ span {
     line-height: 1.7;
     margin: auto;
 }
+
+/*  */
+
+/* SEÇÃO PROJETOS */
+.projetos-section{
+    background-color: var(--second-bg-color);
+}
+
+.projetos-container{
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projetos-section .projetos-title{
+    margin-bottom: 5rem;
+}
+
+.projetos-container img{
+    width: 15rem;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
 /*  */

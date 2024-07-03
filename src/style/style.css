@@ -502,4 +502,11 @@ span {
     box-shadow: 0 0 25px var(--main-color);
 }
 
+.container-conteudo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+
 /*  */

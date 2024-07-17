@@ -86,7 +86,7 @@ body {
 /*  */
 
 /* SEÇÔES/GERAL */
-section {
+section:not(:last-of-type) {
     min-height: 100vh;
     padding: 10rem 12% 10rem;
 }
@@ -132,12 +132,13 @@ span {
 
 .home-img {
     border-radius: 50%;
+
 }
 
 .home-img img {
     position: relative;
-    top: 3rem;
-    width: 30vw;
+    left: 3rem;
+    width: 28vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
@@ -154,7 +155,7 @@ span {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.8;
-    max-width: 1000px;
+    max-width: 700px;
 }
 
 .social-icons a {
@@ -221,7 +222,7 @@ span {
 .texto-animacao {
     font-size: 34px;
     font-weight: 600;
-    min-height: 280px;
+    /* min-height: 280px; */
 }
 
 .texto-animacao span {
@@ -235,9 +236,9 @@ span {
 }
 
 .texto-animacao span::after {
-    content: "";
+    content: " ";
     background-color: var(--bg-color);
-    position: relative;
+    position: absolute;
     width: calc(100% + 8px);
     height: 100%;
     border-left: 3px solid var(--bg-color);
@@ -245,8 +246,8 @@ span {
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
-@keyframes cursor {
-    to {
+@keyframes cursor{
+    to{
         border-left: 2px solid var(--main-color);
     }
 }
@@ -265,7 +266,7 @@ span {
 
     41%,
     60% {
-        content: " Designer UI UX ";
+        content: "Designer UI UX";
     }
 
     61%,
@@ -275,7 +276,7 @@ span {
 
     81%,
     100% {
-        content: "Teste";
+        content: "Desenvolvedor de Software";
     }
 }
 
@@ -290,8 +291,8 @@ span {
     70%,
     75%,
     90%,
-    95% {
-        width: 0;
+    95%{
+    width: 0;
     }
 
     5%,
@@ -302,8 +303,8 @@ span {
     60%,
     65%,
     80%,
-    85% {
-        width: calc(100% + 8px);
+    85%{
+    width: calc(100% + 8px);
     }
 }
 
@@ -335,7 +336,7 @@ span {
     position: relative;
 }
 
-.linhaDoTempo-data p{
+.linhaDoTempo-data p {
     display: flex;
     flex-direction: column;
 }
@@ -469,7 +470,8 @@ span {
     transform: scale(1.03);
 }
 
-.servicos .servicos-info,.servicos-info-software {
+.servicos .servicos-info,
+.servicos-info-software {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -485,9 +487,9 @@ span {
     line-height: 2;
 }
 
-.servicos-info-software h4{
+.servicos-info-software h4 {
     font-size: 3rem;
-    font-weight: 800;    
+    font-weight: 800;
     line-height: 35px;
 }
 
@@ -498,7 +500,7 @@ span {
     line-height: 1.5;
     margin: auto;
     text-align: justify;
-  
+
 }
 
 /*  */
@@ -555,7 +557,7 @@ span {
 .projetos-conteudo:hover {
     transform: scale(1.1);
     transition: 0.4s ease-in-out;
-    filter: drop-shadow(0px 0px 7px  #00ffee );
+    filter: drop-shadow(0px 0px 7px #00ffee);
 }
 
 .projetos-conteudo h2 {
@@ -571,10 +573,15 @@ span {
     background-color: var(--bg-color);
 }
 
+
 .contato h2 {
     font-size: 2.8rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contato form {
@@ -675,14 +682,150 @@ span {
     padding: 0 15px;
 }
 
-/* 
-@media(max-width:1285px){
-    html{
+
+@media(max-width:1285px) {
+    html {
         font-size: 55%;
     }
-    .
+
+    .servicos-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5rem;
+    }
+
+    .servicos-info p,
+    .servicos-info-software p {
+        font-size: 1.6rem;
+    }
+
+    .servicos-container h4 {
+        font-size: 3.5rem;
+        line-height: 3rem;
+        margin-bottom: 8px;
+    }
 }
- */
+
+@media(max-width:991px) {
+    header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .linhaDoTempo-container::before {
+        left: 7px;
+    }
+
+    .linhaDoTempo-conteudo:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .linhaDoTempo-conteudo:nth-child(even),
+    .linhaDoTempo-conteudo:nth-child(odd) {
+        padding-left: 37px;
+    }
+
+    .linhaDoTempo-Ponto {
+        left: 0;
+    }
+
+    .servicos-section {
+        padding-bottom: 7rem;
+    }
+
+    .container-conteudo-w .projetos-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contato {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media(max-width:895px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.82);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+
+    .navbar .active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+
+    .home-section {
+        flex-direction: column-reverse;
+        margin: 4rem 4rem;
+    }
+
+    .home-container h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-container h1 {
+        font-size: 8rem;
+    }
+
+    .home-container p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .home-img img {
+        width: 56vw;
+    }
+
+    .servicos-section {
+        margin-bottom: 3rem;
+    }
+
+    .servicos-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .servicos-info p,
+    .servicos-info-software p {
+        font-size: 11px;
+    }
+
+    .servicos-container h4 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin-bottom: 8px;
+    }
+
+    .container-conteudo-w {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 
 

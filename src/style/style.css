@@ -156,6 +156,7 @@ span {
     font-weight: 500;
     line-height: 1.8;
     max-width: 700px;
+    margin-top: 20px;
 }
 
 .social-icons a {
@@ -794,8 +795,9 @@ span {
     }
 
     .home-container p {
+        font-size: 1.5rem;
         max-width: 600px;
-        margin: 0 auto;
+        margin-top: 20px;
     }
 
     .home-img img {

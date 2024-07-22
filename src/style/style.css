@@ -770,7 +770,7 @@ span {
         display: none;
     }
 
-    .navbar .active {
+    .active{
         display: block;
     }
 

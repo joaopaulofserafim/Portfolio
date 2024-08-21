@@ -4,7 +4,7 @@ let navBar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navBarLinks = document.querySelectorAll('header nav a');
 
-// FUNÇÃO PARA JANELA DE NAVEGAÇÃO (NÃO FINALIZADO)
+// FUNÇÃO PARA JANELA DE NAVEGAÇÃO 
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;

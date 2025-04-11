@@ -257,7 +257,7 @@ span {
 
     0%,
     20% {
-        content: "Desenvolvedor Front-End";
+        content: "Desenvolvedor";
     }
 
     21%,
@@ -267,7 +267,7 @@ span {
 
     41%,
     60% {
-        content: "Designer UI UX";
+        content: "Desenvolvedor de Software";
     }
 
     61%,
@@ -277,7 +277,7 @@ span {
 
     81%,
     100% {
-        content: "Desenvolvedor de Software";
+        content: "Programador";
     }
 }
 

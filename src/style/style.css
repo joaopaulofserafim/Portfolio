@@ -89,7 +89,7 @@ body {
 /* SEÇÔES/GERAL */
 section:not(:last-of-type) {
     min-height: 100vh;
-    padding: 10rem 18% 10rem;
+    padding: 10rem 20% 10rem;
 }
 
 .home-section {
@@ -461,7 +461,7 @@ span {
 
 .servicos {
     background-color: var(--main-color);
-    height: 400px;
+    height: 430px;
     width: 80rem;
     border-radius: 3rem;
     border: 5px solid transparent;
@@ -887,4 +887,8 @@ span {
     font-size: 14px;
     color: rgb(0, 0, 0);
 }
-
+.projetos-title_2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 3rem;
+}

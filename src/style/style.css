@@ -27,6 +27,7 @@ body {
     scroll-behavior: smooth;
     background-color: var(--bg-color);
     color: var(--text-color);
+      margin: 0;                /* tira as margens padrão */
 }
 
 /*  */
@@ -88,7 +89,7 @@ body {
 /* SEÇÔES/GERAL */
 section:not(:last-of-type) {
     min-height: 100vh;
-    padding: 10rem 12% 10rem;
+    padding: 10rem 18% 10rem;
 }
 
 .home-section {
@@ -121,10 +122,11 @@ span {
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size: 3.5rem;
+    width: 700px;
 }
 
 .home-container h1 {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
@@ -257,7 +259,7 @@ span {
 
     0%,
     20% {
-        content: "Desenvolvedor";
+        content: "Estudante de ADS";
     }
 
     21%,
@@ -277,7 +279,7 @@ span {
 
     81%,
     100% {
-        content: "Programador";
+        content: "Front-end & Back-end Developer";
     }
 }
 
@@ -438,6 +440,7 @@ span {
 .servicos-section {
     background-color: var(--bg-color);
     color: black;
+    /* margin-left: 100px; */
 }
 
 .servicos-section h2 {
@@ -449,19 +452,24 @@ span {
 }
 
 .servicos-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
     align-items: center;
     gap: 2.5rem;
+    
 }
 
 .servicos {
     background-color: var(--main-color);
-    height: 300px;
+    height: 400px;
+    width: 80rem;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    margin-bottom: 7rem;
+    display: flex;
+    padding: 10rem;
 }
 
 .servicos:hover {
@@ -473,19 +481,21 @@ span {
 
 .servicos .servicos-info,
 .servicos-info-software {
-    display: flex;
+    display:flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     max-height: 200px;
-    justify-content: left;
+    justify-content: center;
     align-items: baseline;
     padding: 2.5rem 5rem;
+    align-items: center;
 }
 
 .servicos-info h4 {
     font-size: 3rem;
     font-weight: 800;
     line-height: 2;
+    margin-top: 4rem;
 }
 
 .servicos-info-software h4 {
@@ -499,8 +509,11 @@ span {
     font-weight: 600;
     max-height: 1000px;
     line-height: 1.5;
-    margin: auto;
+    margin-top: 6rem;
     text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -702,12 +715,13 @@ span {
     .servicos-info p,
     .servicos-info-software p {
         font-size: 1.6rem;
+        margin-top: 20px;
     }
 
     .servicos-container h4 {
         font-size: 3.5rem;
         line-height: 3rem;
-        margin-bottom: 8px;
+        margin-top: 4rem;
     }
 }
 
@@ -819,12 +833,13 @@ span {
     .servicos-info p,
     .servicos-info-software p {
         font-size: 11px;
+        margin-top: 8px;
     }
 
     .servicos-container h4 {
         font-size: 2.5rem;
         line-height: 3rem;
-        margin-bottom: 8px;
+        margin-top: 9rem;
     }
 
     .container-conteudo-w {
@@ -840,16 +855,36 @@ span {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*  */
+
+
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 3rem;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #7e8bff;
+  color: black;
+  transform: scale(1.05);
+}
+
+.btn-group-projeto{   
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+}
+.tech-footer{
+    text-align: center;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+

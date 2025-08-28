@@ -27,7 +27,8 @@ body {
     scroll-behavior: smooth;
     background-color: var(--bg-color);
     color: var(--text-color);
-      margin: 0;                /* tira as margens padrão */
+    margin: 0;
+    /* tira as margens padrão */
 }
 
 /*  */
@@ -90,6 +91,7 @@ body {
 section:not(:last-of-type) {
     min-height: 100vh;
     padding: 10rem 20% 10rem;
+    gap: 100px;
 }
 
 .home-section {
@@ -104,6 +106,7 @@ section:not(:last-of-type) {
     align-items: baseline;
     text-align: left;
     justify-content: center;
+    align-items: center;
     margin-top: 3rem;
 }
 
@@ -249,8 +252,8 @@ span {
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
-@keyframes cursor{
-    to{
+@keyframes cursor {
+    to {
         border-left: 2px solid var(--main-color);
     }
 }
@@ -294,8 +297,8 @@ span {
     70%,
     75%,
     90%,
-    95%{
-    width: 0;
+    95% {
+        width: 0;
     }
 
     5%,
@@ -306,8 +309,8 @@ span {
     60%,
     65%,
     80%,
-    85%{
-    width: calc(100% + 8px);
+    85% {
+        width: calc(100% + 8px);
     }
 }
 
@@ -452,17 +455,14 @@ span {
 }
 
 .servicos-container {
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 1fr); */
     align-items: center;
     gap: 2.5rem;
-    
+
 }
 
 .servicos {
     background-color: var(--main-color);
     height: 430px;
-    width: 80rem;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
@@ -481,7 +481,7 @@ span {
 
 .servicos .servicos-info,
 .servicos-info-software {
-    display:flex;
+    display: flex;
     flex-direction: column;
     text-align: center;
     max-height: 200px;
@@ -607,7 +607,7 @@ span {
     text-align: center;
 }
 
-.contato-title span{
+.contato-title span {
     margin-left: 10px;
 }
 
@@ -716,6 +716,7 @@ span {
     .servicos-info-software p {
         font-size: 1.6rem;
         margin-top: 20px;
+        width: 130%;
     }
 
     .servicos-container h4 {
@@ -723,6 +724,33 @@ span {
         line-height: 3rem;
         margin-top: 4rem;
     }
+
+    .servicos {
+        background-color: var(--main-color);
+        height: 430px;
+        border-radius: 3rem;
+        border: 5px solid transparent;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        margin-bottom: 7rem;
+        display: flex;
+        /* padding: 10rem; */
+    }
+
+    .servicos-info-software h4 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 30px;
+    }
+
+    .servicos .servicos-info,
+    .servicos-info-software {
+        display: flex;
+        flex-direction: column;
+
+        padding: 2.5rem;
+    }
+
 }
 
 @media(max-width:991px) {
@@ -767,6 +795,18 @@ span {
     .footer {
         padding: 2rem 3%;
     }
+
+    .servicos {
+        background-color: var(--main-color);
+        /* height: 430px; */
+        border-radius: 3rem;
+        border: 5px solid transparent;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        margin-bottom: 7rem;
+        display: flex;
+        /* padding: 10rem; */
+    }
 }
 
 @media(max-width:895px) {
@@ -788,7 +828,7 @@ span {
         display: none;
     }
 
-    .active{
+    .active {
         display: block;
     }
 
@@ -834,6 +874,14 @@ span {
     .servicos-info-software p {
         font-size: 11px;
         margin-top: 8px;
+        width: 28vh;
+    }
+
+    .servicos .servicos-info,
+    .servicos-info-software {
+        display: flex;
+        flex-direction: column;
+        /* padding: 2.5rem; */
     }
 
     .servicos-container h4 {
@@ -845,13 +893,27 @@ span {
     .container-conteudo-w {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .servicos {
+        background-color: var(--main-color);
+        /* height: 430px; */
+        border-radius: 3rem;
+        border: 5px solid transparent;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        margin-bottom: 7rem;
+        display: flex;
+        /* padding: 10rem; */
+    }
+
+
+    section:not(:last-of-type) {
+        min-height: 100vh;
+        min-width: 90vh;
+        /* padding: 10rem 20% 10rem; */
+        padding: 10rem 12rem 1rem 1rem;
+    }
 }
-
-
-
-
-
-
 
 
 
@@ -860,34 +922,36 @@ span {
 
 
 .btn {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-  margin-top: 3rem;
-  transition: 0.3s ease;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 3rem;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
-  background: #7e8bff;
-  color: black;
-  transform: scale(1.05);
+    background: #7e8bff;
+    color: black;
+    transform: scale(1.05);
 }
 
-.btn-group-projeto{   
-  display: flex;
-  justify-content: center; 
-  gap: 20px; 
+.btn-group-projeto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-.tech-footer{
+
+.tech-footer {
     text-align: center;
     font-size: 14px;
     color: rgb(0, 0, 0);
 }
-.projetos-title_2{
+
+.projetos-title_2 {
     font-size: 2rem;
     color: white;
     margin-bottom: 3rem;

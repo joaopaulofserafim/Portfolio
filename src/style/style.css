@@ -890,12 +890,12 @@ span {
         margin-top: 9rem;
     }
 
-    .container-conteudo-w {
+    /* .container-conteudo-w {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 3rem;
         justify-items: center;
-    }
+    } */
 
     .servicos {
         background-color: var(--main-color);

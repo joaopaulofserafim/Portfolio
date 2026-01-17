@@ -443,7 +443,7 @@ span {
 .servicos-section {
     background-color: var(--bg-color);
     color: black;
-    /* margin-left: 100px; */
+    padding: 10rem 20% 10rem;
 }
 
 .servicos-section h2 {
@@ -455,66 +455,81 @@ span {
 }
 
 .servicos-container {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     gap: 2.5rem;
+    width: 100%;
+}
 
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
 }
 
 .servicos {
     background-color: var(--main-color);
-    height: 430px;
-    border-radius: 3rem;
-    border: 5px solid transparent;
+    border-radius: 2rem;
+    border: 3px solid transparent;
     cursor: pointer;
-    transition: 0.4s ease-in-out;
-    margin-bottom: 7rem;
+    transition: all 0.4s ease-in-out;
     display: flex;
-    padding: 10rem;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(126, 139, 255, 0.2);
 }
 
 .servicos:hover {
     background-color: white;
     color: black;
-    border: 5px solid var(--main-color);
-    transform: scale(1.03);
+    border: 3px solid var(--main-color);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(126, 139, 255, 0.4);
 }
 
 .servicos .servicos-info,
 .servicos-info-software {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    max-height: 200px;
-    justify-content: center;
-    align-items: baseline;
-    padding: 2.5rem 5rem;
-    align-items: center;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2.5rem;
+    height: 100%;
 }
 
 .servicos-info h4 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
-    line-height: 2;
-    margin-top: 4rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    color: inherit;
 }
 
 .servicos-info-software h4 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
-    line-height: 35px;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    color: inherit;
 }
 
 .servicos p {
-    font-size: 1.6rem;
-    font-weight: 600;
-    max-height: 1000px;
-    line-height: 1.5;
-    margin-top: 6rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0.5rem 0;
     text-align: justify;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: inherit;
+}
 
+.servicos-info-software strong {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.servicos:hover .servicos-info-software strong {
+    color: var(--main-color);
 }
 
 /*  */
@@ -549,8 +564,10 @@ span {
 
 .container-conteudo-w {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 4rem;
+    width: 100%;
+    padding: 0 2rem;
 }
 
 
@@ -706,49 +723,17 @@ span {
         font-size: 55%;
     }
 
-    .servicos-container {
-        padding-bottom: 7rem;
+    .servicos-grid {
         grid-template-columns: repeat(2, 1fr);
-        margin: 0 5rem;
     }
 
     .servicos-info p,
     .servicos-info-software p {
-        font-size: 1.6rem;
-        margin-top: 20px;
-        width: 130%;
-    }
-
-    .servicos-container h4 {
-        font-size: 3.5rem;
-        line-height: 3rem;
-        margin-top: 4rem;
-    }
-
-    .servicos {
-        background-color: var(--main-color);
-        height: 430px;
-        border-radius: 3rem;
-        border: 5px solid transparent;
-        cursor: pointer;
-        transition: 0.4s ease-in-out;
-        margin-bottom: 7rem;
-        display: flex;
-        /* padding: 10rem; */
+        font-size: 1.4rem;
     }
 
     .servicos-info-software h4 {
-        font-size: 3.5rem;
-        font-weight: 800;
-        line-height: 30px;
-    }
-
-    .servicos .servicos-info,
-    .servicos-info-software {
-        display: flex;
-        flex-direction: column;
-
-        padding: 2.5rem;
+        font-size: 1.8rem;
     }
 
 }
@@ -820,7 +805,7 @@ span {
         right: 0;
         width: 50%;
         padding: 1rem 3%;
-        background: rgba(0, 0, 0, 0.82);
+        background: rgba(0, 0, 0, 0.9);
         backdrop-filter: blur(20px);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
@@ -828,7 +813,7 @@ span {
         display: none;
     }
 
-    .active {
+    .navbar.active {
         display: block;
     }
 
@@ -841,80 +826,109 @@ span {
 
     .home-section {
         flex-direction: column-reverse;
-        margin: 4rem 4rem;
+        padding: 10rem 3% 2rem;
+        gap: 2rem;
+    }
+
+    .home-container {
+        width: 100%;
+        text-align: center;
+        align-items: center;
     }
 
     .home-container h3 {
         font-size: 2.6rem;
+        width: 100%;
     }
 
     .home-container h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .home-container p {
         font-size: 1.5rem;
-        max-width: 600px;
+        max-width: 100%;
         margin-top: 20px;
     }
 
     .home-img img {
-        width: 56vw;
+        width: 60vw;
+        left: 0;
     }
 
     .servicos-section {
         margin-bottom: 3rem;
     }
 
-    .servicos-container {
-        grid-template-columns: repeat(1, 1fr);
+    .servicos-grid {
+        grid-template-columns: 1fr;
     }
 
     .servicos-info p,
     .servicos-info-software p {
-        font-size: 11px;
-        margin-top: 8px;
-        width: 28vh;
+        font-size: 1.4rem;
     }
 
-    .servicos .servicos-info,
-    .servicos-info-software {
-        display: flex;
-        flex-direction: column;
-        /* padding: 2.5rem; */
+    .servicos-info-software h4 {
+        font-size: 1.8rem;
     }
-
-    .servicos-container h4 {
-        font-size: 2.5rem;
-        line-height: 3rem;
-        margin-top: 9rem;
-    }
-
-    /* .container-conteudo-w {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 3rem;
-        justify-items: center;
-    } */
 
     .servicos {
-        background-color: var(--main-color);
-        /* height: 430px; */
-        border-radius: 3rem;
-        border: 5px solid transparent;
-        cursor: pointer;
-        transition: 0.4s ease-in-out;
-        margin-bottom: 7rem;
-        display: flex;
-        /* padding: 10rem; */
+        margin-bottom: 2rem;
     }
 
+    .btn-group-projeto {
+        flex-direction: column;
+    }
+
+    .servicos .btn-group-projeto .btn {
+        width: 100%;
+    }
 
     section:not(:last-of-type) {
-        min-height: 100vh;
-        min-width: 90vh;
-        /* padding: 10rem 20% 10rem; */
-        padding: 10rem 12rem 1rem 1rem;
+        min-height: auto;
+        padding: 8rem 5% 4rem;
+    }
+
+    .container-conteudo-w {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media(max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home-container h1 {
+        font-size: 3.2rem;
+    }
+
+    .home-container h3 {
+        font-size: 2rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+    }
+
+    .navbar {
+        width: 70%;
+    }
+
+    .linhaDoTempo-texto {
+        padding: 20px;
+    }
+
+    .container-conteudo-w {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .footer ul li {
+        display: block;
+        margin: 1rem 0;
     }
 }
 
@@ -944,14 +958,66 @@ span {
 
 .btn-group-projeto {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: auto;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.servicos .btn-group-projeto .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
+    border-radius: 0.8rem;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+}
+
+.servicos .btn {
+    background: black;
+    color: white;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+.servicos .btn:hover {
+    background: var(--main-color);
+    color: black;
+    border: 2px solid var(--main-color);
+}
+
+.servicos:hover .btn {
+    background: var(--main-color);
+    color: black;
+    border: 2px solid var(--main-color);
+}
+
+.btn-corporativo[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    pointer-events: none;
+}
+
+.btn-corporativo[disabled]:hover {
+    background: black;
+    color: white;
+    border: 2px solid black;
+    transform: none;
 }
 
 .tech-footer {
-    text-align: center;
-    font-size: 14px;
-    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 1.3rem;
+    color: inherit;
+    margin: 1.5rem 0;
+    font-weight: 600;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+}
+
+.servicos:hover .tech-footer {
+    border-top: 2px solid rgba(126, 139, 255, 0.3);
 }
 
 .projetos-title_2 {

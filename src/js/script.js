@@ -26,5 +26,13 @@ window.onscroll = () => {
 // FUNÇÃO MENU HAMBURGUER
 menuHamburguer.onclick = () => {
     menuHamburguer.classList.toggle('bx-x');
-    navBar.classList.toggle('active')
+    navBar.classList.toggle('active');
 }
+
+// FECHAR MENU AO CLICAR EM UM LINK
+navBarLinks.forEach(link => {
+    link.onclick = () => {
+        menuHamburguer.classList.remove('bx-x');
+        navBar.classList.remove('active');
+    }
+});

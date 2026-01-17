@@ -9,8 +9,8 @@
   <link rel="icon" href="/src/img/icons8-website-16.png" type="image/x-icon">
   <title>Portifolio</title>
 </head>
-  
-<body> 
+
+<body>
   <header class="header">
     <a href="#home-section" class="logo">João <span>Paulo </span></a>
 
@@ -33,7 +33,8 @@
         Sou um jovem de 19 anos, morador de Interlagos, São Paulo, em constante evolução na área de Tecnologia da
         Informação, com foco em Desenvolvimento. Tenho formação técnica em Multimídia pelo Senac e curso de
         Desenvolvimento Web Front-End pelo SENAI, em parceria com a Ford Company. Atualmente curso Análise e
-        Desenvolvimento de Sistemas no Senac. Tenho interesse especial em Back-End e Front-End, e busco aplicar meus
+        Desenvolvimento de Sistemas no Senac. Tenho interesse especial em Desenvolvimento (Front ou Back), Automações de Processos,
+        DevOps e etc, busco aplicar meus
         conhecimentos em projetos desafiadores. Valorizo a comunicação clara, a proatividade, o trabalho em equipe e a
         organização, sempre buscando aprender mais e contribuir com soluções inovadoras.
       </p>
@@ -201,7 +202,7 @@
   <section class="servicos-section" id="servicos-section">
     <h2 class="title-servicos">Projetos</h2>
 
-    <div class="servicos-container">
+    <div class="servicos-container servicos-grid">
       <div class="servicos">
         <div class="servicos-info-software">
           <h4>Projeto Ford - Página Web Mustang</h4>
@@ -213,7 +214,7 @@
 
           </p>
           <p class="tech-footer">
-            <strong>Tecnologias usadas: </strong> &nbsp;HTML, CSS e JavaScript
+            <strong style="color: black;">Tecnologias usadas: </strong> &nbsp;HTML, CSS e JavaScript
           </p>
           <div class="btn-group-projeto">
             <a href="https://xgh-projeto-final.vercel.app/" target="_blank" class="btn">
@@ -239,11 +240,10 @@
 
           </p>
           <p class="tech-footer">
-            <strong>Tecnologias usadas: </strong> &nbsp;Java e Maven
+            <strong style="color: black;">Tecnologias usadas: </strong> &nbsp;Java e Maven
           </p>
           <div class="btn-group-projeto">
-            <a href="https://github.com/joaopaulofserafim/CacaAoTesouro" target="_blank"
-              class="btn">
+            <a href="https://github.com/joaopaulofserafim/CacaAoTesouro" target="_blank" class="btn">
               Projeto GitHub
             </a>
           </div>
@@ -261,11 +261,100 @@
 
           </p>
           <p class="tech-footer">
-            <strong>Tecnologias usadas: </strong> &nbsp;Java, VSCode, NetBeans, PowerShell
+            <strong style="color: black;">Tecnologias usadas: </strong> &nbsp;Java, VSCode, NetBeans, PowerShell
           </p>
           <div class="btn-group-projeto">
             <a href="https://github.com/stapani7/Grupo-3---Turma-A?tab=readme-ov-file" target="_blank" class="btn">
               Projeto GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="servicos">
+        <div class="servicos-info-software">
+          <h4>Automação de Monitoramento e NOC</h4>
+          <p>
+            <strong style="color: black;">Desafio:</strong> Processo manual de abertura de chamados e ausência de
+            monitoramento centralizado, resultando em demora na resposta a quedas de link e perda de indicadores de
+            disponibilidade.
+            <br><br>
+            <strong style="color: black;">Solução:</strong> Desenvolvimento de automação em Python que recebe eventos do
+            PRTG. Ao detectar uma queda, o script envia alertas, abre chamados automaticamente com o provedor (via
+            mapeamento local) e utiliza arquivos .lock para evitar duplicidade. Ao restaurar a conexão, calcula o
+            downtime e gera relatórios quinzenais em HTML/e-mail com dados persistidos em SQLite.
+          </p>
+          <p class="tech-footer">
+            <strong style="color: black;">Tecnologias usadas: </strong> &nbsp;Python, PRTG, SQLite, SMTP, JSON, HTML
+          </p>
+          <div class="btn-group-projeto">
+            <a href="#" class="btn btn-corporativo" disabled>
+              Projeto Corporativo
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 30 30">
+                <path
+                  d="M 15 2 C 11.145666 2 8 5.1456661 8 9 L 8 11 L 6 11 C 4.895 11 4 11.895 4 13 L 4 25 C 4 26.105 4.895 27 6 27 L 24 27 C 25.105 27 26 26.105 26 25 L 26 13 C 26 11.895 25.105 11 24 11 L 22 11 L 22 9 C 22 5.2715823 19.036581 2.2685653 15.355469 2.0722656 A 1.0001 1.0001 0 0 0 15 2 z M 15 4 C 17.773666 4 20 6.2263339 20 9 L 20 11 L 10 11 L 10 9 C 10 6.2263339 12.226334 4 15 4 z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="servicos">
+        <div class="servicos-info-software">
+          <h4>Provisionamento Automatizado de Identidades</h4>
+          <p>
+            <strong style="color: black;">Desafio:</strong> Alta demanda de criação manual de usuários no Active
+            Directory, causando sobrecarga do time de TI, erros de digitação e demora no onboarding de novos
+            colaboradores.
+            <br><br>
+            <strong style="color: black;">Solução:</strong> Implementação de fluxo automatizado via PowerShell que
+            consome dados da Google Sheets API. O script valida logins únicos, cria usuários no AD, aplica políticas de
+            segurança e associa grupos automaticamente com base no setor do colaborador, notificando as partes
+            interessadas via e-mail.
+          </p>
+          <p class="tech-footer">
+            <strong style="color: black;">Tecnologias usadas: </strong> &nbsp;PowerShell, Active Directory, Google
+            Sheets API v4, Service Accounts
+          </p>
+          <div class="btn-group-projeto">
+            <a href="#" class="btn btn-corporativo" disabled>
+              Projeto Corporativo
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 30 30">
+                <path
+                  d="M 15 2 C 11.145666 2 8 5.1456661 8 9 L 8 11 L 6 11 C 4.895 11 4 11.895 4 13 L 4 25 C 4 26.105 4.895 27 6 27 L 24 27 C 25.105 27 26 26.105 26 25 L 26 13 C 26 11.895 25.105 11 24 11 L 22 11 L 22 9 C 22 5.2715823 19.036581 2.2685653 15.355469 2.0722656 A 1.0001 1.0001 0 0 0 15 2 z M 15 4 C 17.773666 4 20 6.2263339 20 9 L 20 11 L 10 11 L 10 9 C 10 6.2263339 12.226334 4 15 4 z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="servicos">
+        <div class="servicos-info-software">
+          <h4>Orquestrador de Liberações e Pedidos</h4>
+          <p>
+            <strong style="color: black;">Desafio:</strong> Sobrecarga de solicitações de liberação via chat
+            (Financeiro), gerando falta de rastreabilidade, interrupções constantes e dificuldade na gestão de
+            prioridades.
+            <br><br>
+            <strong style="color: black;">Solução:</strong> Desenvolvimento de ecossistema Full-stack que centraliza os
+            pedidos. Inclui UI para gestão, API com autenticação por token para integrações externas e automação de
+            status via triggers. O sistema notifica o solicitante em cada etapa (Recebido/Em Processo/Concluído)
+            diretamente via Google Workspace.
+          </p>
+          <p class="tech-footer">
+            <strong style="color: black;">Tecnologias usadas: </strong> &nbsp;Google Apps Script, Google Sheets,
+            HTML/CSS/JavaScript, REST API
+          </p>
+          <div class="btn-group-projeto">
+            <a href="#" class="btn btn-corporativo" disabled>
+              Projeto Corporativo
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 30 30">
+                <path
+                  d="M 15 2 C 11.145666 2 8 5.1456661 8 9 L 8 11 L 6 11 C 4.895 11 4 11.895 4 13 L 4 25 C 4 26.105 4.895 27 6 27 L 24 27 C 25.105 27 26 26.105 26 25 L 26 13 C 26 11.895 25.105 11 24 11 L 22 11 L 22 9 C 22 5.2715823 19.036581 2.2685653 15.355469 2.0722656 A 1.0001 1.0001 0 0 0 15 2 z M 15 4 C 17.773666 4 20 6.2263339 20 9 L 20 11 L 10 11 L 10 9 C 10 6.2263339 12.226334 4 15 4 z">
+                </path>
+              </svg>
             </a>
           </div>
         </div>
@@ -392,6 +481,23 @@
           </svg>
         </div>
 
+
+        <div class="projetos-conteudo">
+
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#5d4037"
+              d="M42,17.3C42,37.8,24,44,24,44S6,37.8,6,17.3c0-2.5,0.2-4.6,0.4-6.3c0.3-2.5,2-4.5,4.4-5.1 C13.9,5,18.8,4,24,4s10.1,1,13.3,1.9c2.4,0.6,4.1,2.7,4.4,5.1C41.8,12.7,42,14.9,42,17.3z">
+            </path>
+            <path fill="#4caf50"
+              d="M24,7c4.9,0,9.5,1,12.5,1.8c1.2,0.3,2,1.3,2.2,2.6c0.2,1.9,0.3,3.9,0.3,5.9c0,15.6-11.5,21.9-15,23.4 c-3.5-1.6-15-7.9-15-23.4c0-2,0.1-4,0.3-5.9c0.1-1.3,1-2.3,2.2-2.6C14.5,8,19.1,7,24,7 M24,4c-5.2,0-10.1,1-13.3,1.9 C8.4,6.5,6.6,8.6,6.4,11C6.2,12.7,6,14.9,6,17.3C6,37.8,24,44,24,44s18-6.2,18-26.7c0-2.5-0.2-4.6-0.4-6.3c-0.3-2.5-2-4.5-4.4-5.1 C34.1,5,29.2,4,24,4L24,4z">
+            </path>
+            <path fill="#dcedc8" d="M23 28H25V36H23z"></path>
+            <path fill="#4caf50"
+              d="M24,10c0,0-6,5-6,13c0,5.2,3.3,8.5,5,10l1-3l1,3c1.7-1.5,5-4.8,5-10C30,15,24,10,24,10z"></path>
+            <path fill="#81c784" d="M24,10c0,0-6,5-6,13c0,5.2,3.3,8.5,5,10l1-3V10z"></path>
+          </svg>
+        </div>
+
         <div class="projetos-conteudo">
 
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 40 40">
@@ -460,37 +566,7 @@
 
         <div class="projetos-conteudo">
 
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-            <radialGradient id="yRNsYj0k48m_5059Aqtv_a_g7UKWvv49CoI_gr1" cx="-1207.054" cy="544.406" r=".939"
-              gradientTransform="matrix(-11.7002 31.247 54.5012 20.4075 -43776.117 26617.47)"
-              gradientUnits="userSpaceOnUse">
-              <stop offset=".064" stop-color="#bf8af6"></stop>
-              <stop offset=".533" stop-color="#3079d6"></stop>
-              <stop offset="1" stop-color="#11408c"></stop>
-            </radialGradient>
-            <path fill="url(#yRNsYj0k48m_5059Aqtv_a_g7UKWvv49CoI_gr1)"
-              d="M20.084,3.026L19.86,3.162c-0.357,0.216-0.694,0.458-1.008,0.722l0.648-0.456H25L26,11l-5,5	l-5,3.475v4.007c0,2.799,1.463,5.394,3.857,6.844l5.264,3.186L14,40h-2.145l-3.998-2.42C5.463,36.131,4,33.535,4,30.736V17.261	c0-2.8,1.464-5.396,3.86-6.845l12-7.259C19.934,3.112,20.009,3.068,20.084,3.026z">
-            </path>
-            <radialGradient id="yRNsYj0k48m_5059Aqtv_b_g7UKWvv49CoI_gr2" cx="-1152.461" cy="523.628" r="1"
-              gradientTransform="matrix(30.7198 -4.5183 -2.9847 -20.2925 36976.637 5454.876)"
-              gradientUnits="userSpaceOnUse">
-              <stop offset=".211" stop-color="#bf8af6"></stop>
-              <stop offset="1" stop-color="#591c96"></stop>
-            </radialGradient>
-            <path fill="url(#yRNsYj0k48m_5059Aqtv_b_g7UKWvv49CoI_gr2)"
-              d="M32,19v4.48c0,2.799-1.463,5.394-3.857,6.844l-12,7.264c-2.455,1.486-5.509,1.54-8.007,0.161	l11.722,7.095c2.547,1.542,5.739,1.542,8.285,0l12-7.264C42.537,36.131,44,33.535,44,30.736V27.5L43,26L32,19z">
-            </path>
-            <radialGradient id="yRNsYj0k48m_5059Aqtv_c_g7UKWvv49CoI_gr3" cx="-1236.079" cy="516.112" r="1.19"
-              gradientTransform="matrix(-24.1583 -6.1256 -10.3118 40.6682 -24498.48 -28534.523)"
-              gradientUnits="userSpaceOnUse">
-              <stop offset=".059" stop-color="#50e6ff"></stop>
-              <stop offset=".68" stop-color="#3079d6"></stop>
-              <stop offset="1" stop-color="#11408c"></stop>
-            </radialGradient>
-            <path fill="url(#yRNsYj0k48m_5059Aqtv_c_g7UKWvv49CoI_gr3)"
-              d="M40.14,10.415l-12-7.259c-2.467-1.492-5.538-1.538-8.043-0.139L19.86,3.162	C17.464,4.611,16,7.208,16,10.007v9.484l3.86-2.335c2.546-1.54,5.735-1.54,8.281,0l12,7.259c2.321,1.404,3.767,3.884,3.855,6.583	C43.999,30.911,44,30.824,44,30.736V17.26C44,14.461,42.536,11.864,40.14,10.415z">
-            </path>
-          </svg>
+
         </div>
       </div>
     </div>
@@ -534,7 +610,7 @@
 
     <ul class="lista">
       <li>
-        <a href="#servicos-section">Serviços</a>
+        <a href="#servicos-section">Projetos</a>
       </li>
       <li>
         <a href="#home-section">Sobre mim</a>
